@@ -36,37 +36,39 @@ ACTOR BloodSplasher
 	States
 	{
 	Spawn:
-		TNT1 A 0 ACS_NamedExecuteAlways("ScreenEffects")
+		TNT1 A 0 A_ClearTarget
+		TNT1 A 0 A_Look
+		//TNT1 A 0 ACS_NamedExecuteAlways("ScreenEffects")
 		TNT1 A 0 A_RadiusGive("BloodSplasherZ", 96, RGF_PLAYERS, 1)
-		TNT1 A 0 A_JumpIfInventory("BloodSplasherz", 1, "Blood", AAPTR_PLAYER1)
-		Goto BloodSplashStop
+		TNT1 A 0 A_JumpIfInTargetInventory("BloodSplasherz", 1, "Blood")
+		 Stop
 
 	Blood:
-		TNT1 A 0 A_Giveinventory("BloodOnVisor",1,AAPTR_PLAYER1)
-		TNT1 A 0 A_GiveInventory("MeatAmmo", 1, AAPTR_PLAYER1)
-		TNT1 A 0 A_JumpIfInventory("ScreenFX",1,"BloodSplashStop", AAPTR_PLAYER1)
-		TNT1 A 0 A_TakeFromTarget("BloodSplasherz", 1, 0, AAPTR_PLAYER1)
+		TNT1 A 0 A_TakeFromTarget("BloodSplasherz", 1)
+		TNT1 A 0 A_GiveToTarget("BloodOnVisor", 1)
+		TNT1 A 0 A_GiveToTarget("MeatAmmo", 1)
+		TNT1 A 0 A_JumpIfInTargetInventory("ScreenFX", 1, "BloodSplashStop")
 		TNT1 A 0 A_Jump(255,"Bled1","Bled2","Bled3","Bled4","Bled5","Bled6")
 		Goto Bled1
 
         Bled1:
         TNT1 A 0 ACS_Execute(580, 0, 0, 0, 0)
-         Goto BloodSplashStop
+		 Stop
         Bled2:
         TNT1 A 0 ACS_Execute(581, 0, 0, 0, 0)
-         Goto BloodSplashStop
+		 Stop
         Bled3:
         TNT1 A 0 ACS_Execute(582, 0, 0, 0, 0)
-         Goto BloodSplashStop
+		 Stop
         Bled4:
         TNT1 A 0 ACS_Execute(583, 0, 0, 0, 0)
-         Goto BloodSplashStop
+		 Stop
         Bled5:
         TNT1 A 0 ACS_Execute(584, 0, 0, 0, 0)
-         Goto BloodSplashStop
+		 Stop
         Bled6:
         TNT1 A 0 ACS_Execute(585, 0, 0, 0, 0)
-         Goto BloodSplashStop
+		 Stop
 		 
 	BloodSplashStop:
 		TNT1 A 1
@@ -77,9 +79,7 @@ ACTOR BloodSplasher
 	}
 }
 
-
-
-ACTOR TinyBloodSplasher
+ACTOR TinyBloodSplasher : BloodSplasher
 {
 	Game Doom
     damagefactor "Trample", 0.0
@@ -99,14 +99,17 @@ ACTOR TinyBloodSplasher
 	States
 	{
 	Spawn:
-     TNT1 A 1
-      //TNT1 AAAAA 0 A_CustomMissile ("BloodSplashParticle", 15, 0, random (0, 360), 2, random (45, 160))
-	  TNT1 A 0 A_Explode(3,96)
-      Stop
+		TNT1 A 0 A_ClearTarget
+		TNT1 A 0 A_Look
+		//TNT1 A 0 ACS_NamedExecuteAlways("ScreenEffects")
+		TNT1 A 0 A_RadiusGive("BloodSplasherZ", 48, RGF_PLAYERS, 1)
+		TNT1 A 0 A_JumpIfInTargetInventory("BloodSplasherz", 1, "Blood")
+		 Stop
+		
 	}
 }
 
-ACTOR SuperBloodSplasher
+ACTOR SuperBloodSplasher : BloodSplasher
 {
 	Game Doom
     damagefactor "Trample", 0.0
@@ -126,11 +129,12 @@ ACTOR SuperBloodSplasher
 	States
 	{
 	Spawn:
-      //TNT1 A 0 A_Explode(2,600)
-     BTRL A 4
-        //TNT1 AAAAA 0 A_CustomMissile ("BloodSplashParticleFast", 15, 0, random (0, 360), 2, random (45, 160))
-      TNT1 AAA 0 A_Explode(3,500)
-      Stop
+		TNT1 A 0 A_ClearTarget
+		TNT1 A 0 A_Look
+		//TNT1 A 0 ACS_NamedExecuteAlways("ScreenEffects")
+		TNT1 A 0 A_RadiusGive("BloodSplasherZ", 96, RGF_PLAYERS, 1)
+		TNT1 A 0 A_JumpIfInTargetInventory("BloodSplasherz", 1, "Blood")
+		Stop
 	}
 }
 
@@ -158,36 +162,38 @@ ACTOR BlueBloodSplasher
 	States
 	{
 	Spawn:
-		TNT1 A 0 ACS_NamedExecuteAlways("ScreenEffects")
+		TNT1 A 0 A_ClearTarget
+		TNT1 A 0 A_Look
+		//TNT1 A 0 ACS_NamedExecuteAlways("ScreenEffects")
 		TNT1 A 0 A_RadiusGive("BloodSplasherBlueBlood", 96, RGF_PLAYERS, 1)
-		TNT1 A 0 A_JumpIfInventory("BloodSplasherBlueBlood", 1, "BlueBlood", AAPTR_PLAYER1)
-		Goto BlueBloodSplashStop
+		TNT1 A 0 A_JumpIfInTargetInventory("BloodSplasherBlueBlood", 1, "BlueBlood")
+		Stop
 
 	BlueBlood:
-		TNT1 A 0 A_Giveinventory("BlueBloodOnVisor",1,AAPTR_PLAYER1)
-		TNT1 A 0 A_JumpIfInventory("ScreenFX",1,"BlueBloodSplashStop", AAPTR_PLAYER1)
-		TNT1 A 0 A_TakeFromTarget("BloodSplasherBlueBlood", 1, 0, AAPTR_PLAYER1)
+		TNT1 A 0 A_TakeFromTarget("BloodSplasherBlueBlood", 1)
+		TNT1 A 0 A_GiveToTarget("BlueBloodOnVisor", 1)
+		TNT1 A 0 A_JumpIfInTargetInventory("ScreenFX", 1, "BlueBloodSplashStop")
 		TNT1 A 0 A_Jump(255,"BBled1","BBled2","BBled3","BBled4","BBled5","BBled6")
 		Goto BBled1
 		
         BBled1:
         TNT1 A 0 ACS_Execute(570, 0, 0, 0, 0)
-         Goto BlueBloodSplashStop
+         Stop
         BBled2:
         TNT1 A 0 ACS_Execute(571, 0, 0, 0, 0)
-         Goto BlueBloodSplashStop
+         Stop
         BBled3:
         TNT1 A 0 ACS_Execute(572, 0, 0, 0, 0)
-         Goto BlueBloodSplashStop
+         Stop
         BBled4:
         TNT1 A 0 ACS_Execute(573, 0, 0, 0, 0)
-         Goto BlueBloodSplashStop
+         Stop
         BBled5:
         TNT1 A 0 ACS_Execute(574, 0, 0, 0, 0)
-         Goto BlueBloodSplashStop
+         Stop
         BBled6:
         TNT1 A 0 ACS_Execute(575, 0, 0, 0, 0)
-         Goto BlueBloodSplashStop
+         Stop
 		 
 	BlueBloodSplashStop:
 		TNT1 A 1
@@ -198,7 +204,7 @@ ACTOR BlueBloodSplasher
 	}
 }
 
-ACTOR BlueSuperBloodSplasher
+ACTOR BlueSuperBloodSplasher : BlueBloodSplasher
 {
 	Game Doom
     damagefactor "Trample", 0.0
@@ -210,17 +216,19 @@ ACTOR BlueSuperBloodSplasher
 	+NOCLIP
 	+NOGRAVITY
 	+ACTIVATEMCROSS
-+NODAMAGETHRUST
+	+NODAMAGETHRUST
     +WINDTHRUST
 	+BLOODLESSIMPACT 
 	DeathSound "None"
 	States
 	{
 	Spawn:
-      TNT1 A 0 A_Explode(3,500)
-     BTRL A 4
-      TNT1 A 0 A_Explode(3,500)
-      Stop
+		TNT1 A 0 A_ClearTarget
+		TNT1 A 0 A_Look
+		//TNT1 A 0 ACS_NamedExecuteAlways("ScreenEffects")
+		TNT1 A 0 A_RadiusGive("BloodSplasherBlueBlood", 96, RGF_PLAYERS, 1)
+		TNT1 A 0 A_JumpIfInTargetInventory("BloodSplasherBlueBlood", 1, "BlueBlood")
+		Stop
 	}
 }
 
@@ -247,36 +255,38 @@ ACTOR GreenBloodSplasher
 	States
 	{
 	Spawn:
-	   TNT1 A 0 ACS_NamedExecuteAlways("ScreenEffects")
+		TNT1 A 0 A_ClearTarget
+		TNT1 A 0 A_Look
+		//TNT1 A 0 ACS_NamedExecuteAlways("ScreenEffects")
 		TNT1 A 0 A_RadiusGive("BloodSplasherGreenBlood", 96, RGF_PLAYERS, 1)
-		TNT1 A 0 A_JumpIfInventory("BloodSplasherGreenBlood", 1, "GreenBlood", AAPTR_PLAYER1)
-		Goto GreenBloodSplashStop
+		TNT1 A 0 A_JumpIfInTargetInventory("BloodSplasherGreenBlood", 1, "GreenBlood")
+		Stop
 
 	GreenBlood:
-		TNT1 A 0 A_Giveinventory("GreenBloodOnVisor",1,AAPTR_PLAYER1)
-		TNT1 A 0 A_JumpIfInventory("ScreenFX",1,"GreenBloodSplashStop", AAPTR_PLAYER1)
-		TNT1 A 0 A_TakeFromTarget("BloodSplasherGreenBlood", 1, 0, AAPTR_PLAYER1)
+		TNT1 A 0 A_TakeFromTarget("BloodSplasherGreenBlood", 1)
+		TNT1 A 0 A_GiveToTarget("GreenBloodOnVisor", 1)
+		TNT1 A 0 A_JumpIfInTargetInventory("ScreenFX", 1, "GreenBloodSplashStop")
 		TNT1 A 0 A_Jump(255,"GBled1","GBled2","GBled3","GBled4","GBled5","GBled6")
 		Goto GBled1
 
         GBled1:
         TNT1 A 0 ACS_Execute(560, 0, 0, 0, 0)
-         Goto GreenBloodSplashStop
+         Stop
         GBled2:
         TNT1 A 0 ACS_Execute(561, 0, 0, 0, 0)
-         Goto GreenBloodSplashStop
+         Stop
         GBled3:
         TNT1 A 0 ACS_Execute(562, 0, 0, 0, 0)
-         Goto GreenBloodSplashStop
+         Stop
         GBled4:
         TNT1 A 0 ACS_Execute(563, 0, 0, 0, 0)
-         Goto GreenBloodSplashStop
+         Stop
         GBled5:
         TNT1 A 0 ACS_Execute(564, 0, 0, 0, 0)
-         Goto GreenBloodSplashStop
+         Stop
         GBled6:
         TNT1 A 0 ACS_Execute(565, 0, 0, 0, 0)
-         Goto GreenBloodSplashStop
+         Stop
 		 
 	GreenBloodSplashStop:
 		TNT1 A 1
@@ -286,7 +296,7 @@ ACTOR GreenBloodSplasher
 	}
 }
 
-ACTOR GreenSuperBloodSplasher
+ACTOR GreenSuperBloodSplasher : GreenBloodSplasher
 {
 	Game Doom
     damagefactor "Trample", 0.0
@@ -305,9 +315,18 @@ ACTOR GreenSuperBloodSplasher
 	States
 	{
 	Spawn:
-      TNT1 A 0 A_Explode(3,500)
-     BTRL A 4
-      TNT1 A 0 A_Explode(3,500)
-      Stop
+		TNT1 A 0 A_ClearTarget
+		TNT1 A 0 A_Look
+		//TNT1 A 0 ACS_NamedExecuteAlways("ScreenEffects")
+		TNT1 A 0 A_RadiusGive("BloodSplasherGreenBlood", 96, RGF_PLAYERS, 1)
+		TNT1 A 0 A_JumpIfInTargetInventory("BloodSplasherGreenBlood", 1, "GreenBlood")
+		Stop
 	}
 }
+
+
+
+
+
+
+
