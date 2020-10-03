@@ -207,7 +207,7 @@
 			REVO A 0 A_Takeinventory("Clip3",1)
 				InsertShellAnimation:	
 			REVO A 0
-			TNT1 A 0 A_PlaySound("insertshell")
+			TNT1 A 0 A_PlaySound("insertrev")
 			REVR M 1 Offset(0, 30)
 			REVR M 1 Offset(0, 28)
 			REVR M 1 Offset(0, 30)

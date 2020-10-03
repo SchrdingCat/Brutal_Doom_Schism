@@ -767,6 +767,7 @@
 	$limit MP40 30
 	$limit weapons/sg 10
 	insertshell        SHELL_IN
+	insertrev        REVLOAD
 	DSRLAUN DSRLAUN
 	DSF2OOF DSF2OOF
 	//PlayerSounds
@@ -853,6 +854,7 @@
 	weapons/reloadgrenade			GRELOAD
 	GRLLO1 GRLLO1
 	GRLLO2 GRLLO2
+	PREL2 PREL2
 	$rolloff weapons/firegrenade 3000 100 
 	$limit world/watersplash 4
 	$limit world/sludgegloop 2
@@ -1040,6 +1042,7 @@
 	RELO1 RELO1
 	RELO2 RELO2
 	insertshell        SHELL_IN
+	M60CHAIN M60CHAIN
 	M249        M249
 	M249R1        M249R1
 	M249R2        M249R2
