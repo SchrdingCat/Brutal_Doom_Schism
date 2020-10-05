@@ -35,6 +35,7 @@
 	#include "Actors/SpecialEffects/Casing.txt"
 	#include "Actors/SpecialEffects/Fire.txt"
 	#include "Actors/SpecialEffects/Sparks.txt"
+	#include "Actors/SpecialEffects/Sparkles.txt"
 	#include "Actors/SpecialEffects/Flares.txt"
 	#include "Actors/PowerUps/Artifact.txt"
 	#include "Actors/PowerUps/health2.txt"
