@@ -1,220 +1,210 @@
-// This is the base class from which all other classes will inhert properties from.
-// If you are looking to disable something, you need to look here, but do not touch!
-// Change what you want on the inheriting class, NOT the base class.
-ACTOR BDoomer : Doomer
-{
-	Player.DisplayName "UAC Marine"
-	Player.Portrait "PTACA0" 
-	Player.StartItem "BrutalPistol" 
-	Player.StartItem "Rifle"
-	Player.StartItem "Melee_Attacks"
-	Player.StartItem "HandGrenades", 1
-	Player.StartItem "IsPlayer", 1
-	Player.StartItem "IsNOTTacticalClass", 1
-	Player.StartItem "NeverSelectedShotgun", 1
-	Player.StartItem "Clip2", 120
-	Player.StartItem "Clip1", 48
-	//Slot2
-	Player.StartItem "BDPistolAmmo", 16 
-	Player.StartItem "BDDualPistolAmmo", 32
-	Player.StartItem "BDSMGAmmo", 41
-	Player.StartItem "BDDualSMGAmmo", 82
-	Player.StartItem "MP40Ammo", 32
-	Player.StartItem "DualMP40Ammo", 64
-	Player.StartItem "RevolverAmmo", 6
-	//Slot3
-	Player.StartItem "ShotgunAmmo", 9
-	Player.StartItem "CryoShotgunAmmo",8
-	Player.StartItem "SSGAmmo", 2
-	Player.StartItem "QSSGAmmo", 4
-	//Slot4
-	Player.StartItem "RifleAmmo", 31
-	Player.StartItem "DoubleRifleAmmo", 62
-	Player.StartItem "LeftRifleAmmo", 31
-	Player.StartItem "HMGAmmo", 100
-	Player.StartItem "BDHeavyRifleAmmo", 20
-	Player.StartItem "SniperRifleAmmo", 33
-		Player.StartItem "ZoomX6", 1 //it's sniper rifle scope zoom token, without it variable zoom meachanics won't work proper.
-
-	//Slot5
-	Player.StartItem "RocketRounds", 6
-	Player.StartItem "GLAmmo", 1
-	//Slot6
-	Player.StartItem "PlasmaAmmo", 50
-	Player.StartItem "DoublePlasmaAmmo", 100
-	Player.StartItem "RailgunAmmo", 50
-	//Slot9
-	Player.StartItem "GrenadeAmmo", 2
-	Player.StartItem "AmmoDroper"
-	DamageFactor "KillMeBot", 0.0
-	Species "Marines"
-}
-
-ACTOR Sorcerer : Doomer
-{
-	//Height 56
-	Radius 12
-	Mass 100
-	
-	Player.DisplayName "Sorcerer"
-    Player.SoundClass "Sorcerer"
-	Player.Portrait "PSORA0" 
-	Player.UseRange 1024 //telekinetic use with power of mind
-	Player.StartItem "MageDagger"
-	
-	Player.StartItem "Frostmancy"
-	Player.StartItem "IceShards"
-	Player.StartItem "Piromancy"
-	Player.StartItem "Stormcast"
-	Player.StartItem "Runecraft"
-	Player.StartItem "RuneAmmo", 12
-	Player.StartItem "BrutalGreenMana", 200
-	Player.StartItem "BrutalBlueMana", 200
-
-	Player.StartItem "IsPlayer", 1
-	Player.StartItem "IsSorcerer", 1
-	Player.StartItem "MageMeleeStaff", 1
-	Player.StartItem "IsNOTTacticalClass", 1
-	Player.StartItem "NeverSelectedShotgun", 1
-	//Slot2
-	Player.StartItem "BDPistolAmmo", 16
-	Player.StartItem "BDDualPistolAmmo", 32
-	Player.StartItem "BDSMGAmmo", 41
-	Player.StartItem "BDDualSMGAmmo", 82
-	Player.StartItem "MP40Ammo", 32
-	Player.StartItem "DualMP40Ammo", 64
-	Player.StartItem "RevolverAmmo", 6
-	//Slot3
-	Player.StartItem "ShotgunAmmo", 9
-	Player.StartItem "SSGAmmo", 2
-	Player.StartItem "QSSGAmmo", 4
-	//Slot4
-	Player.StartItem "RifleAmmo", 31
-	Player.StartItem "DoubleRifleAmmo", 62
-	Player.StartItem "LeftRifleAmmo", 31
-	Player.StartItem "HMGAmmo", 100
-	Player.StartItem "BDHeavyRifleAmmo", 20
-	Player.StartItem "SniperRifleAmmo", 33
-		Player.StartItem "ZoomX6", 1 //it's sniper rifle scope zoom token, without it variable zoom meachanics won't work proper.
-
-	//Slot5
-	Player.StartItem "RocketRounds", 6
-	Player.StartItem "GLAmmo", 1
-	//Slot6
-	Player.StartItem "PlasmaAmmo", 50
-	Player.StartItem "DoublePlasmaAmmo", 100
-	Player.StartItem "RailgunAmmo", 50
-	//Slot9
-	Player.StartItem "AmmoDroper"
-	DamageFactor "KillMeBot", 0.0
-	damagefactor "fire", 0.5 //fire of mancubus n' foe mages
-	damagefactor "lightning", 0.4 //fire of mancubus n' foe mages
-	Species "Marines"
-}
-
-ACTOR Paladin : Doomer
-{
-	Mass 250
-    player.viewheight	50
-	MaxStepHeight 32
-	//Player.JumpZ 12
-	Player.DisplayName "Paladin"
-    Player.SoundClass "Sorcerer"
-	Player.Portrait "PPALA0" //Brutal Paladin Knight Face hohoho bitches!
-	Player.StartItem "Berserker_Melee_Attacks"
-	Player.StartItem "TheQuietus", 1
-	Player.StartItem "BattleAxe", 1
-	Player.StartItem "IsPlayer", 1
-	Player.StartItem "IsPaladin", 1
-	Player.StartItem "IsNOTTacticalClass", 1
-	Player.StartItem "NeverSelectedShotgun", 1
-	//Slot2
-	Player.StartItem "BDPistolAmmo", 16
-	Player.StartItem "BDDualPistolAmmo", 32
-	Player.StartItem "BDSMGAmmo", 41
-	Player.StartItem "BDDualSMGAmmo", 82
-	Player.StartItem "MP40Ammo", 32
-	Player.StartItem "DualMP40Ammo", 64
-	Player.StartItem "RevolverAmmo", 6
-	//Slot3
-	Player.StartItem "ShotgunAmmo", 9
-	Player.StartItem "SSGAmmo", 2
-	Player.StartItem "QSSGAmmo", 4
-	//Slot4
-	Player.StartItem "RifleAmmo", 31
-	Player.StartItem "DoubleRifleAmmo", 62
-	Player.StartItem "LeftRifleAmmo", 31
-	Player.StartItem "HMGAmmo", 100
-	Player.StartItem "BDHeavyRifleAmmo", 20
-	Player.StartItem "SniperRifleAmmo", 33
-		Player.StartItem "ZoomX6", 1 //it's sniper rifle scope zoom token, without it variable zoom meachanics won't work proper.
-
-	//Slot5
-	Player.StartItem "RocketRounds", 6
-	Player.StartItem "GLAmmo", 1
-	//Slot6
-	Player.StartItem "PlasmaAmmo", 50
-	Player.StartItem "DoublePlasmaAmmo", 100
-	Player.StartItem "RailgunAmmo", 50
-	//Slot9
-	Player.StartItem "AmmoDroper"
-	//Player.StartItem "HelmetAnimationAlreadyPlayed", 0
-	Player.StartItem "PlayHelmetAnimation", 1
-	
-	DamageFactor "KillMeBot", 0.0
-	damagefactor "ShieldDefense", 0.0
-	damagefactor "ShieldBash", 0.0
-	damagefactor "Fatality", 0.3
-	damagefactor "rip", 0.5 //imp attacks
-	damagefactor "MonsterBullet", 0.22 //zombieman bullets
-	damagefactor "MonsterShotgunBullet", 0.22 //sergeants shrapnel
-	damagefactor "MonsterCutless", 0.22 //WTF lol)
-	damagefactor "burn", 0.6 //imp fireballs
-	damagefactor "cut", 0.6 //kinda grenade damages n' sword
-	damagefactor "saw", 0.6 //hateful chainsaw
-	damagefactor "fire", 0.6 //fire of mancubus n' foe mages
-	damagefactor "lightning", 0.8 //less then monsters had, but more then normal marine
-	Species "Marines"
-}
-
-ACTOR TacticalDoomer : Doomer
-{
-	+NOMENU
-	Speed 1.0
-	Player.RunHealth 999
-	Player.DisplayName "Tactical Mode"
-	Player.Portrait "PTACA0" 
-	Player.StartItem "Rifle"
-	Player.StartItem "BrutalPistol"
-	Player.StartItem "Melee_Attacks"
-	Player.StartItem "HandGrenades", 1
-	Player.StartItem "IsPlayer", 1
-	Player.StartItem "IsTacticalClass", 1
-	Player.StartItem "JustStartedGame", 1
-	Player.StartItem "NoAutoReload", 1
-	Player.StartItem "NeverSelectedShotgun", 1
-	Player.StartItem "Clip1", 30
-	Player.StartItem "Clip2", 30
-	//Slot2
-	Player.StartItem "BDPistolAmmo", 16
-	Player.StartItem "BDSMGAmmo", 41
-	Player.StartItem "MP40Ammo", 32
-	Player.StartItem "RevolverAmmo", 6
-	//Slot3
-	Player.StartItem "ShotgunAmmo", 9
-	Player.StartItem "SSGAmmo", 2
-	Player.StartItem "AssaultShotgunAmmo", 20
-	//Slot4
-	Player.StartItem "RifleAmmo", 31
-	//Slot5
-	Player.StartItem "RocketRounds", 6
-	Player.StartItem "GLAmmo", 1
-	//Slot6
-	Player.StartItem "PlasmaAmmo", 50
-	Player.StartItem "RailgunAmmo", 50
-	//Slot9
-	Player.StartItem "GrenadeAmmo", 1
-	Player.StartItem "AmmoDroper"
-	DamageFactor "KillMeBot", 0.0
-	Species "Marines"
-}
+	// This is the base class from which all other classes will inhert properties from.
+	// If you are looking to disable something, you need to look here, but do not touch!
+	// Change what you want on the inheriting class, NOT the base class.
+	ACTOR BDoomer : Doomer
+	{
+		Player.DisplayName "UAC Marine"
+		Player.Portrait "PTACA0" 
+		Player.StartItem "BrutalPistol" 
+		Player.StartItem "Rifle"
+		Player.StartItem "Melee_Attacks"
+		Player.StartItem "HandGrenades", 1
+		Player.StartItem "IsPlayer", 1
+		Player.StartItem "IsNOTTacticalClass", 1
+		Player.StartItem "NeverSelectedShotgun", 1
+		Player.StartItem "Clip2", 120
+		Player.StartItem "Clip1", 48
+		//Slot2
+		Player.StartItem "BDPistolAmmo", 16 
+		Player.StartItem "BDDualPistolAmmo", 32
+		Player.StartItem "BDSMGAmmo", 41
+		Player.StartItem "BDDualSMGAmmo", 82
+		Player.StartItem "MP40Ammo", 32
+		Player.StartItem "DualMP40Ammo", 64
+		Player.StartItem "RevolverAmmo", 6
+		//Slot3
+		Player.StartItem "ShotgunAmmo", 9
+		Player.StartItem "CryoShotgunAmmo",8
+		Player.StartItem "SSGAmmo", 2
+		Player.StartItem "QSSGAmmo", 4
+		//Slot4
+		Player.StartItem "RifleAmmo", 31
+		Player.StartItem "DoubleRifleAmmo", 62
+		Player.StartItem "LeftRifleAmmo", 31
+		Player.StartItem "HMGAmmo", 100
+		Player.StartItem "BDHeavyRifleAmmo", 20
+		Player.StartItem "SniperRifleAmmo", 33
+			Player.StartItem "ZoomX6", 1 //it's sniper rifle scope zoom token, without it variable zoom meachanics won't work proper.
+		//Slot5
+		Player.StartItem "RocketRounds", 6
+		Player.StartItem "GLAmmo", 1
+		//Slot6
+		Player.StartItem "PlasmaAmmo", 50
+		Player.StartItem "DoublePlasmaAmmo", 100
+		Player.StartItem "RailgunAmmo", 50
+		//Slot9
+		Player.StartItem "GrenadeAmmo", 2
+		Player.StartItem "AmmoDroper"
+		DamageFactor "KillMeBot", 0.0
+		Species "Marines"
+	}
+	ACTOR Sorcerer : Doomer
+	{
+		//Height 56
+		Radius 12
+		Mass 100
+			Player.DisplayName "Sorcerer"
+		Player.SoundClass "Sorcerer"
+		Player.Portrait "PSORA0" 
+		Player.UseRange 1024 //telekinetic use with power of mind
+		Player.StartItem "MageDagger"
+			Player.StartItem "Frostmancy"
+		Player.StartItem "IceShards"
+		Player.StartItem "Piromancy"
+		Player.StartItem "Stormcast"
+		Player.StartItem "Runecraft"
+		Player.StartItem "RuneAmmo", 12
+		Player.StartItem "BrutalGreenMana", 200
+		Player.StartItem "BrutalBlueMana", 200
+		Player.StartItem "IsPlayer", 1
+		Player.StartItem "IsSorcerer", 1
+		Player.StartItem "MageMeleeStaff", 1
+		Player.StartItem "IsNOTTacticalClass", 1
+		Player.StartItem "NeverSelectedShotgun", 1
+		//Slot2
+		Player.StartItem "BDPistolAmmo", 16
+		Player.StartItem "BDDualPistolAmmo", 32
+		Player.StartItem "BDSMGAmmo", 41
+		Player.StartItem "BDDualSMGAmmo", 82
+		Player.StartItem "MP40Ammo", 32
+		Player.StartItem "DualMP40Ammo", 64
+		Player.StartItem "RevolverAmmo", 6
+		//Slot3
+		Player.StartItem "ShotgunAmmo", 9
+		Player.StartItem "SSGAmmo", 2
+		Player.StartItem "QSSGAmmo", 4
+		//Slot4
+		Player.StartItem "RifleAmmo", 31
+		Player.StartItem "DoubleRifleAmmo", 62
+		Player.StartItem "LeftRifleAmmo", 31
+		Player.StartItem "HMGAmmo", 100
+		Player.StartItem "BDHeavyRifleAmmo", 20
+		Player.StartItem "SniperRifleAmmo", 33
+			Player.StartItem "ZoomX6", 1 //it's sniper rifle scope zoom token, without it variable zoom meachanics won't work proper.
+		//Slot5
+		Player.StartItem "RocketRounds", 6
+		Player.StartItem "GLAmmo", 1
+		//Slot6
+		Player.StartItem "PlasmaAmmo", 50
+		Player.StartItem "DoublePlasmaAmmo", 100
+		Player.StartItem "RailgunAmmo", 50
+		//Slot9
+		Player.StartItem "AmmoDroper"
+		DamageFactor "KillMeBot", 0.0
+		damagefactor "fire", 0.5 //fire of mancubus n' foe mages
+		damagefactor "lightning", 0.4 //fire of mancubus n' foe mages
+		Species "Marines"
+	}
+	ACTOR Paladin : Doomer
+	{
+		Mass 250
+		player.viewheight	50
+		MaxStepHeight 32
+		//Player.JumpZ 12
+		Player.DisplayName "Paladin"
+		Player.SoundClass "Sorcerer"
+		Player.Portrait "PPALA0" //Brutal Paladin Knight Face hohoho bitches!
+		Player.StartItem "Berserker_Melee_Attacks"
+		Player.StartItem "TheQuietus", 1
+		Player.StartItem "BattleAxe", 1
+		Player.StartItem "IsPlayer", 1
+		Player.StartItem "IsPaladin", 1
+		Player.StartItem "IsNOTTacticalClass", 1
+		Player.StartItem "NeverSelectedShotgun", 1
+		//Slot2
+		Player.StartItem "BDPistolAmmo", 16
+		Player.StartItem "BDDualPistolAmmo", 32
+		Player.StartItem "BDSMGAmmo", 41
+		Player.StartItem "BDDualSMGAmmo", 82
+		Player.StartItem "MP40Ammo", 32
+		Player.StartItem "DualMP40Ammo", 64
+		Player.StartItem "RevolverAmmo", 6
+		//Slot3
+		Player.StartItem "ShotgunAmmo", 9
+		Player.StartItem "SSGAmmo", 2
+		Player.StartItem "QSSGAmmo", 4
+		//Slot4
+		Player.StartItem "RifleAmmo", 31
+		Player.StartItem "DoubleRifleAmmo", 62
+		Player.StartItem "LeftRifleAmmo", 31
+		Player.StartItem "HMGAmmo", 100
+		Player.StartItem "BDHeavyRifleAmmo", 20
+		Player.StartItem "SniperRifleAmmo", 33
+			Player.StartItem "ZoomX6", 1 //it's sniper rifle scope zoom token, without it variable zoom meachanics won't work proper.
+		//Slot5
+		Player.StartItem "RocketRounds", 6
+		Player.StartItem "GLAmmo", 1
+		//Slot6
+		Player.StartItem "PlasmaAmmo", 50
+		Player.StartItem "DoublePlasmaAmmo", 100
+		Player.StartItem "RailgunAmmo", 50
+		//Slot9
+		Player.StartItem "AmmoDroper"
+		//Player.StartItem "HelmetAnimationAlreadyPlayed", 0
+		Player.StartItem "PlayHelmetAnimation", 1
+			DamageFactor "KillMeBot", 0.0
+		damagefactor "ShieldDefense", 0.0
+		damagefactor "ShieldBash", 0.0
+		damagefactor "Fatality", 0.3
+		damagefactor "rip", 0.5 //imp attacks
+		damagefactor "MonsterBullet", 0.22 //zombieman bullets
+		damagefactor "MonsterShotgunBullet", 0.22 //sergeants shrapnel
+		damagefactor "MonsterCutless", 0.22 //WTF lol)
+		damagefactor "burn", 0.6 //imp fireballs
+		damagefactor "cut", 0.6 //kinda grenade damages n' sword
+		damagefactor "saw", 0.6 //hateful chainsaw
+		damagefactor "fire", 0.6 //fire of mancubus n' foe mages
+		damagefactor "lightning", 0.8 //less then monsters had, but more then normal marine
+		Species "Marines"
+	}
+	ACTOR TacticalDoomer : Doomer
+	{
+		+NOMENU
+		Speed 1.0
+		Player.RunHealth 999
+		Player.DisplayName "Tactical Mode"
+		Player.Portrait "PTACA0" 
+		Player.StartItem "Rifle"
+		Player.StartItem "BrutalPistol"
+		Player.StartItem "Melee_Attacks"
+		Player.StartItem "HandGrenades", 1
+		Player.StartItem "IsPlayer", 1
+		Player.StartItem "IsTacticalClass", 1
+		Player.StartItem "JustStartedGame", 1
+		Player.StartItem "NoAutoReload", 1
+		Player.StartItem "NeverSelectedShotgun", 1
+		Player.StartItem "Clip1", 30
+		Player.StartItem "Clip2", 30
+		//Slot2
+		Player.StartItem "BDPistolAmmo", 16
+		Player.StartItem "BDSMGAmmo", 41
+		Player.StartItem "MP40Ammo", 32
+		Player.StartItem "RevolverAmmo", 6
+		//Slot3
+		Player.StartItem "ShotgunAmmo", 9
+		Player.StartItem "SSGAmmo", 2
+		Player.StartItem "AssaultShotgunAmmo", 20
+		//Slot4
+		Player.StartItem "RifleAmmo", 31
+		//Slot5
+		Player.StartItem "RocketRounds", 6
+		Player.StartItem "GLAmmo", 1
+		//Slot6
+		Player.StartItem "PlasmaAmmo", 50
+		Player.StartItem "RailgunAmmo", 50
+		//Slot9
+		Player.StartItem "GrenadeAmmo", 1
+		Player.StartItem "AmmoDroper"
+		DamageFactor "KillMeBot", 0.0
+		Species "Marines"
+	}

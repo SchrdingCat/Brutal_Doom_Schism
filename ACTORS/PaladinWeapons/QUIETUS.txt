@@ -91,81 +91,81 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 	Ready:
 	ReadyLoop:
 		TNT1 A 0 A_TakeInventory("InHold2", 1)
-		TNT1 A 0 A_TakeInventory("SpecialAttackSword", 1)
-		TNT1 A 0 A_TakeInventory("ReadyToQuickFire", 1)
-		TNT1 A 0 A_TakeInventory("ReadyToChargedQuickFire", 1)
-		TNT1 A 0 A_TakeInventory("ReadyToLunge", 1)
-		TNT1 A 0 A_TakeInventory("ReadyToSlashDown2", 1)
-		TNT1 A 0 A_TakeInventory("FirstSequenceDone", 1)
-		TNT1 A 0 A_TakeInventory("QuietusIsCharged", 1)
-		TNT1 A 0 A_TakeInventory("PowerHoldTimer", 20)
+		"####" A 0 A_TakeInventory("SpecialAttackSword", 1)
+		"####" A 0 A_TakeInventory("ReadyToQuickFire", 1)
+		"####" A 0 A_TakeInventory("ReadyToChargedQuickFire", 1)
+		"####" A 0 A_TakeInventory("ReadyToLunge", 1)
+		"####" A 0 A_TakeInventory("ReadyToSlashDown2", 1)
+		"####" A 0 A_TakeInventory("FirstSequenceDone", 1)
+		"####" A 0 A_TakeInventory("QuietusIsCharged", 1)
+		"####" A 0 A_TakeInventory("PowerHoldTimer", 20)
 
-        TNT1 A 0 A_TakeInventory("rage",1)
-        TNT1 A 0 A_JumpIfInventory("rage",1,2)
-		TNT1 A 0 A_Jump(256,2)
-		TNT1 A 0 A_GiveInventory("zeal",1)
+        "####" A 0 A_TakeInventory("rage",1)
+        "####" A 0 A_JumpIfInventory("rage",1,2)
+		"####" A 0 A_Jump(256,2)
+		"####" A 0 A_GiveInventory("zeal",1)
 		
 		W04G AB 2 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
-		TNT1 A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
-		TNT1 A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
-        TNT1 A 0 A_JumpIfInventory("Taunting",1,"Taunt")
-		TNT1 A 0 A_JumpIfInventory("Salute1", 1, "Salute")
-		TNT1 A 0 A_JumpIfInventory("Salute2", 1, "Salute")
+		"####" A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
+		"####" A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
+		"####" A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
+        "####" A 0 A_JumpIfInventory("Taunting",1,"Taunt")
+		"####" A 0 A_JumpIfInventory("Salute1", 1, "Salute")
+		"####" A 0 A_JumpIfInventory("Salute2", 1, "Salute")
 
-		TNT1 A 0 A_TakeInventory("rage",1)        	
+		"####" A 0 A_TakeInventory("rage",1)        	
 			
-		W04G C 5 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
-		TNT1 A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
-		TNT1 A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
-        TNT1 A 0 A_JumpIfInventory("Taunting",1,"Taunt")
-		TNT1 A 0 A_JumpIfInventory("Salute1", 1, "Salute")
-		TNT1 A 0 A_JumpIfInventory("Salute2", 1, "Salute")
+		"####" C 5 A_WeaponReady
+		"####" A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
+		"####" A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
+		"####" A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
+        "####" A 0 A_JumpIfInventory("Taunting",1,"Taunt")
+		"####" A 0 A_JumpIfInventory("Salute1", 1, "Salute")
+		"####" A 0 A_JumpIfInventory("Salute2", 1, "Salute")
 
-        TNT1 A 0 A_TakeInventory("rage",1)
-        TNT1 A 0 A_JumpIfInventory("rage",1,2)
-		TNT1 A 0 A_Jump(256,2)
-		TNT1 A 0 A_GiveInventory("zeal",1)
+        "####" A 0 A_TakeInventory("rage",1)
+        "####" A 0 A_JumpIfInventory("rage",1,2)
+		"####" A 0 A_Jump(256,2)
+		"####" A 0 A_GiveInventory("zeal",1)
 	
-		W04G C 5 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
-		TNT1 A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
-		TNT1 A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
-        TNT1 A 0 A_JumpIfInventory("Taunting",1,"Taunt")
-		TNT1 A 0 A_JumpIfInventory("Salute1", 1, "Salute")
-		TNT1 A 0 A_JumpIfInventory("Salute2", 1, "Salute")
+		"####" C 5 A_WeaponReady
+		"####" A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
+		"####" A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
+		"####" A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
+        "####" A 0 A_JumpIfInventory("Taunting",1,"Taunt")
+		"####" A 0 A_JumpIfInventory("Salute1", 1, "Salute")
+		"####" A 0 A_JumpIfInventory("Salute2", 1, "Salute")
 
-		W04G BA 2 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
-		TNT1 A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
-		TNT1 A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
-        TNT1 A 0 A_JumpIfInventory("Taunting",1,"Taunt")
-		TNT1 A 0 A_JumpIfInventory("Salute1", 1, "Salute")
-		TNT1 A 0 A_JumpIfInventory("Salute2", 1, "Salute")
+		"####" BA 2 A_WeaponReady
+		"####" A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
+		"####" A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
+		"####" A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
+        "####" A 0 A_JumpIfInventory("Taunting",1,"Taunt")
+		"####" A 0 A_JumpIfInventory("Salute1", 1, "Salute")
+		"####" A 0 A_JumpIfInventory("Salute2", 1, "Salute")
 
-        TNT1 A 0 A_TakeInventory("rage",1)
-        TNT1 A 0 A_JumpIfInventory("rage",1,2)
-		TNT1 A 0 A_Jump(256,2)
-		TNT1 A 0 A_GiveInventory("zeal",1)
+        "####" A 0 A_TakeInventory("rage",1)
+        "####" A 0 A_JumpIfInventory("rage",1,2)
+		"####" A 0 A_Jump(256,2)
+		"####" A 0 A_GiveInventory("zeal",1)
 		
-		W04G A 5 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
-		TNT1 A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
-		TNT1 A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
-        TNT1 A 0 A_JumpIfInventory("Taunting",1,"Taunt")
-		TNT1 A 0 A_JumpIfInventory("Salute1", 1, "Salute")
-		TNT1 A 0 A_JumpIfInventory("Salute2", 1, "Salute")
+		"####" A 5 A_WeaponReady
+		"####" A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
+		"####" A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
+		"####" A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
+        "####" A 0 A_JumpIfInventory("Taunting",1,"Taunt")
+		"####" A 0 A_JumpIfInventory("Salute1", 1, "Salute")
+		"####" A 0 A_JumpIfInventory("Salute2", 1, "Salute")
 		
-		TNT1 A 0 A_JumpIfInventory("rage",0,2)
-		TNT1 A 0 A_TakeInventory("rage",1)
-		W04G A 5 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
-		TNT1 A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
-		TNT1 A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
-        TNT1 A 0 A_JumpIfInventory("Taunting",1,"Taunt")
-		TNT1 A 0 A_JumpIfInventory("Salute1", 1, "Salute")
-		TNT1 A 0 A_JumpIfInventory("Salute2", 1, "Salute")
+		"####" A 0 A_JumpIfInventory("rage",0,2)
+		"####" A 0 A_TakeInventory("rage",1)
+		"####" A 5 A_WeaponReady
+		"####" A 0 A_JumpIfInventory("TossGrenade",1,"TossGrenade")
+		"####" A 0 A_JumpIfInventory("Reloading",1,"GotoHold2")
+		"####" A 0 A_JumpIfInventory("Kicking", 1, "DoKick")
+        "####" A 0 A_JumpIfInventory("Taunting",1,"Taunt")
+		"####" A 0 A_JumpIfInventory("Salute1", 1, "Salute")
+		"####" A 0 A_JumpIfInventory("Salute2", 1, "Salute")
 		Loop
 
 	Fire:
@@ -179,7 +179,7 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		TNT1 A 0 A_JumpIfInventory("QuietusIsCharged", 1, 5)
 		W04N ABC 2 A_SetAngle((-2)+angle)
 		"####" A 0 A_Jump(256, 5)
-		W04N ABCD 2 A_SetAngle((-2)+angle)	//Razor Slash Charge Sprites
+		W14C ABCD 2 A_SetAngle((-2)+angle)	//Razor Slash Charge Sprites
 	
 	Hold:
 		//Check inventory for Charged Quietus
@@ -195,12 +195,13 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		
 		//Quietus Charged Hold
 		"####" A 0 A_JumpIfInventory("PowerHoldTimer", 20, 3)
-		"####" D 1 BRIGHT
+		"####" A 1 BRIGHT
 		"####" A 0 A_Jump(256, 2)
-	    "####" D 1 BRIGHT A_FireCustomMissile("QuietusParticleSpawner",-64,0,0,5)
-		"####" D 1 BRIGHT A_JumpIfInventory("Kicking",1,"KickLeft")
-		"####" D 1 BRIGHT A_JumpIfInventory("Reloading",1,"GotoHold2")
+	    "####" A 1 BRIGHT A_FireCustomMissile("QuietusParticleSpawner",-64,0,0,5)
+		"####" B 1 BRIGHT A_JumpIfInventory("Kicking",1,"KickLeft")
+		"####" C 1 BRIGHT A_JumpIfInventory("Reloading",1,"GotoHold2")
 		"####" D 1 BRIGHT
+		"####" A 0 A_JumpIfInventory("FiredSecondary", 1, "Lunge")
 		"####" D 0 A_GiveInventory("PowerHoldTimer", 1)
 		"####" D 0 A_Refire
 		
@@ -250,6 +251,7 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		"####" A 0 A_Recoil(-8)
 		"####" A 0 A_FireCustomMissile("SwordSwing", -30, 0, 0, 18)
 		//"####" A 0 A_FireCustomMissile("SawSwing", -45, 0, 0, 13)
+				
 		"####" A 0 A_SetAngle((1)+angle)
 		"####" A 0 A_SetPitch((0.5) + pitch)
 		"####" A 0 A_SetAngle((1)+angle)
@@ -265,6 +267,19 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		"####" A 0 A_SetPitch((0.5) + pitch)
 		"####" A 0 A_SetAngle((1)+angle)
 		"####" G 1 A_SetAngle((1) + angle) 
+		
+		//When Quietus is Charged - Perform Razor shot - Also Super Razor Shot when fully charged
+		"####" A 0 A_JumpIfInventory("QuietusIsCharged", 1, 2)
+		"####" A 0 A_Jump(256, 7)
+		"####" A 0 A_JumpIfInventory("PowerHoldTimer", 20, 4)
+		"####" A 0 A_AlertMonsters
+		"####" A 0 A_FireCustomMissile("QuietusRazorHor", 0, 1, 0, 0)
+		"####" A 0 A_Jump(256, 4)
+		"####" A 0 A_AlertMonsters
+		"####" A 0 A_FireCustomMissile("QuietusRazorHorPower", 0, 1, 0, 0)
+		"####" A 0 A_TakeInventory("PowerHoldTimer", 20)
+		/////////////////////////////////////////////////////////////////////////////////////////
+		
 		"####" A 0 A_FireCustomMissile("SwordSwing", 0, 0, 0, 7) 
 		"####" A 0 A_SetAngle((1.5)+angle)
 		"####" A 0 A_SetPitch((0.5) + pitch)
@@ -280,19 +295,7 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		"####" A 0 A_SetPitch((0.5) + pitch)
 		"####" A 0 A_SetAngle((1)+angle)
 		"####" J 1 A_SetAngle((1) + angle)
-		
-		//When Quietus is Charged - Perform Razor shot - Also Super Razor Shot when fully charged
-		"####" A 0 A_JumpIfInventory("QuietusIsCharged", 1, 2)
-		"####" A 0 A_Jump(256, 7)
-		"####" A 0 A_JumpIfInventory("PowerHoldTimer", 20, 4)
-		"####" A 0 A_AlertMonsters
-		"####" A 0 A_FireCustomMissile("QuietusRazorHor", 0, 1, 0, 0)
-		"####" A 0 A_Jump(256, 4)
-		"####" A 0 A_AlertMonsters
-		"####" A 0 A_FireCustomMissile("QuietusRazorHorPower", 0, 1, 0, 0)
-		"####" A 0 A_TakeInventory("PowerHoldTimer", 20)
-		/////////////////////////////////////////////////////////////////////////////////////////
-		
+				
 		"####" A 0 A_FireCustomMissile("SwordSwing", 30, 0, 0, -3)
 		"####" A 0 A_SetAngle((1)+angle)
 		"####" A 0 A_SetPitch((1.5) + pitch)
@@ -365,6 +368,12 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		"####" A 0 A_Jump(256, 2)
 		W04F DE 1								//Razor Slash Charge Sprites
 		
+		//When Quietus is Charged - Perform Razor shot
+		"####" A 0 A_JumpIfInventory("QuietusIsCharged", 1, 2)
+		"####" A 0 A_Jump(256, 3)
+		"####" A 0 A_AlertMonsters
+		"####" A 0 A_FireCustomMissile("QuietusRazorHor", 0, 1, 0, 0)
+		
 		"####" A 0 SetPlayerProperty(0,1,0)
 		"####" A 0 A_Recoil(-8)
 		"####" A 0 A_FireCustomMissile("SwordSwing", -45, 0, 0, 12)
@@ -399,13 +408,7 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		"####" A 0 A_SetPitch((0.5) + pitch)
 		"####" A 0 A_SetAngle((3)+angle)
 		"####" J 1 A_SetAngle((2) + angle)
-		
-		//When Quietus is Charged - Perform Razor shot
-		"####" A 0 A_JumpIfInventory("QuietusIsCharged", 1, 2)
-		"####" A 0 A_Jump(256, 3)
-		"####" A 0 A_AlertMonsters
-		"####" A 0 A_FireCustomMissile("QuietusRazorHor", 0, 1, 0, 0)
-		
+			
 		"####" A 0 A_FireCustomMissile("SwordSwing", 45, 0, 0, 6)
 		"####" A 0 A_SetAngle((3)+angle)
 		"####" A 0 A_SetPitch((1.5) + pitch)
@@ -701,7 +704,7 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		"####" A 0 A_Jump(256, 11)
 		
 		//Razor Slash Charge Start
-		W04B A 1 A_SetPitch((-2.5) + pitch)
+		W14C A 1 A_SetPitch((-2.5) + pitch)
 		"####" A 0 A_JumpIfInventory("IsCrouching", 1, "Lunge")
 		"####" B 1 A_SetPitch((-2.5) + pitch)
 		"####" A 0 A_JumpIfInventory("IsCrouching", 1, "Lunge")
@@ -709,8 +712,8 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		"####" A 0 A_JumpIfInventory("IsCrouching", 1, "Lunge")
 		"####" D 1 A_SetPitch((-2.0) + pitch)
 		"####" A 0 A_JumpIfInventory("IsCrouching", 1, "Lunge")
-		"####" D 1 A_SetPitch((-1.5) + pitch)
-		"####" E 1 A_SetPitch((-1.5) + pitch)
+		//"####" D 1 A_SetPitch((-1.5) + pitch)
+		//"####" E 1 A_SetPitch((-1.5) + pitch)
 	
 	AltHold:
 		
@@ -729,12 +732,13 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		
 		//Quietus Charged Hold
 		"####" A 0 A_JumpIfInventory("PowerHoldTimer", 20, 3)
-		"####" F 1 BRIGHT
+		"####" A 1 BRIGHT
 		"####" A 0 A_Jump(256, 2)
-	    "####" F 1 BRIGHT A_FireCustomMissile("QuietusParticleSpawner",-64,0,0,5)
-		"####" F 1 BRIGHT A_JumpIfInventory("Kicking",1,"KickLeft")
-		"####" F 1 BRIGHT A_JumpIfInventory("Reloading",1,"GotoHold2")
-		"####" F 1 BRIGHT
+	    "####" B 1 BRIGHT A_FireCustomMissile("QuietusParticleSpawner",-64,0,0,5)
+		"####" C 1 BRIGHT A_JumpIfInventory("Kicking",1,"KickLeft")
+		"####" D 1 BRIGHT A_JumpIfInventory("Reloading",1,"GotoHold2")
+		"####" A 0 A_JumpIfInventory("FiredPrimary", 1, "RoundhouseSlash")
+		//"####" F 1 BRIGHT
 		"####" D 0 A_JumpIfInventory("Zeal", 20, 2)
 		"####" D 0 A_Jump(256, 2)
 		"####" D 0 A_GiveInventory("PowerHoldTimer", 1)
@@ -980,6 +984,10 @@ ACTOR TheQuietus : BrutalWeapon Replaces FWeapQuietus
 		
 	Hold2:
 		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("Taunting",1,2)
+		TNT1 A 0 A_Jump(256, 3)
+		TNT1 A 0 A_TakeInventory("Taunting", 1)
+		TNT1 A 0 A_GiveInventory("QuietusIsCharged", 1)
 		TNT1 A 0 A_JumpIfInventory("Reloading",1,"GotoHold1")
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"KickRight")
 		W04Q A 1 A_WeaponReady
@@ -1107,6 +1115,15 @@ QuickLunge:
 		"####" A 0 A_TakeInventory("SpecialAttackSword", 1)
 		"####" A 0 A_TakeInventory("ReadyToLunge", 1)		//TO PREVENT LUNGE ABUSING
 		
+		//When Quietus is Charged - Perform Rail shot
+		"####" A 0 A_JumpIfInventory("QuietusIsCharged", 1, 2)
+		"####" A 0 A_Jump(256, 6)
+		"####" A 0 A_AlertMonsters
+		"####" A 0 A_FireCustomMissile("QuietusRazorLungeA", 0, 0, -3, 0)
+		"####" A 0 A_FireCustomMissile("QuietusRazorLunge", 0, 0, 0, 0)
+		"####" A 0 A_RailAttack(100, 0, 0, "Green", "none", RGF_SILENT|RGF_NOPIERCING, 0, "QuietusRazorPuff",0,0,1024,0,0,0,0,-15)
+		"####" A 0 A_FireCustomMissile("QuietusRazorLungeB", 0, 0, 3, 0)
+		/////////////////////////////////////////////
 				
 		"####" A 0 A_SetPitch((-2) + pitch)
 		"####" A 0 A_FireCustomMissile("SwordLunge", 2, 0, 0, -4)
@@ -1119,17 +1136,7 @@ QuickLunge:
 		"####" GH 1
 		"####" A 0 A_FireCustomMissile("SwordLunge", 0, 0, 0, 0)
 		"####" A 0 A_Saw("", "", 1, "PaladinMeleePuff", 0, 120, 0,16)
-		
-		//When Quietus is Charged - Perform Rail shot
-		"####" A 0 A_JumpIfInventory("QuietusIsCharged", 1, 2)
-		"####" A 0 A_Jump(256, 6)
-		"####" A 0 A_AlertMonsters
-		"####" A 0 A_FireCustomMissile("QuietusRazorLungeA", 0, 0, -3, 0)
-		"####" A 0 A_FireCustomMissile("QuietusRazorLunge", 0, 0, 0, 0)
-		"####" A 0 A_RailAttack(100, 0, 0, "Green", "none", RGF_SILENT|RGF_NOPIERCING, 0, "QuietusRazorPuff",0,0,1024,0,0,0,0,-15)
-		"####" A 0 A_FireCustomMissile("QuietusRazorLungeB", 0, 0, 3, 0)
-		/////////////////////////////////////////////
-		
+				
 		"####" A 0 A_SetPitch((-1) + pitch)
 		"####" IJ 1
 		"####" A 0 A_FireCustomMissile("SwordLunge", -1, 0, 0, -2)
@@ -1162,7 +1169,7 @@ QuickLunge:
 		//"####" A 0 A_JumpIfInventory("FiredSecondary", 1, "Lunge")
 		//"####" A 0 A_JumpIfInventory("FiredPrimary", 1, "QuickFire")
 		
-		"####" A 5 A_JumpIfInventory("Kicking",1,"KickLeft") 
+		"####" A 0 A_JumpIfInventory("Kicking",1,"KickLeft") 
 
 		"####" PR 2 A_WeaponReady
 		
@@ -1197,28 +1204,10 @@ QuickLunge:
 		"####" A 0 A_GiveInventory("ReadyToLunge", 1)
 		
 		"####" A 0 A_JumpIfInventory("QuietusIsCharged",1, 6)
-		W04L RPON 1 A_SetPitch((-1) + pitch)
+		W04L RPON 1
 		"####" A 0 A_Jump(256, 5)
-		W04L RPON 1 A_SetPitch((-1) + pitch)	//Razor Rail Charge Sprites
-		
-        "####" A 0 A_PlaySound("Paladin/MediumExert", 2)
-		"####" A 0 A_PlaySound("SWSWING")
-		"####" A 0 A_Recoil(-18)
-		"####" A 0 A_SetPitch((-2) + pitch)
-		"####" A 0 A_FireCustomMissile("SwordLunge", 2, 0, 0, -4)
-		"####" A 0 A_Saw("", "", 1, "PaladinMeleePuff", 0, 120, 0,16)
-		"####" A 0 A_SetPitch((-2) + pitch)
-		"####" ML 1
-		"####" A 0 A_FireCustomMissile("SwordLunge", 1, 0, 0, -2)
-		"####" A 0 A_Saw("", "QUIETHIT", 1, "PaladinMeleePuff", 0, 120, 0,16)
-		"####" A 0 A_SetPitch((-2) + pitch)
-		"####" KJ 1
-		
-		"####" A 0 A_PlaySound("QUIETFIR",2)
-		"####" A 0 A_FireCustomMissile("SwordLunge", 1, 0, 0, -2)
-		"####" A 0 A_Saw("", "QUIETHIT", 1, "PaladinMeleePuff", 0, 120, 0,16)
-		//"####" A 0 A_SetPitch((-2) + pitch)
-		
+		W04L RPON 1	//Razor Rail Charge Sprites
+	
 		//When Quietus is Charged - Perform Rail shot - Also Super Rail Shot when fully charged
 		"####" A 0 A_JumpIfInventory("QuietusIsCharged", 1, 2)
 		"####" A 0 A_Jump(256, 14)
@@ -1235,7 +1224,25 @@ QuickLunge:
 		"####" A 0 A_RailAttack(200, 0, 0, "Green", "none", RGF_SILENT, 0, "QuietusRazorPuff",0,0,1024,0,0,0,0,-15)
 		"####" A 0 A_FireCustomMissile("QuietusRazorLungeB", 0, 0, 3, 0)
 		"####" A 0 A_TakeInventory("PowerHoldTimer", 20)
-		///////////////////////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////////////////////////	
+	
+        "####" A 0 A_PlaySound("Paladin/MediumExert", 2)
+		"####" A 0 A_PlaySound("SWSWING")
+		"####" A 0 A_Recoil(-18)
+		"####" A 0 A_SetPitch((-2) + pitch)
+		"####" A 0 A_FireCustomMissile("SwordLunge", 2, 0, 0, -4)
+		"####" A 0 A_Saw("", "", 1, "PaladinMeleePuff", 0, 120, 0,16)
+		"####" A 0 A_SetPitch((-2) + pitch)
+		"####" ML 1 A_SetPitch((-2) + pitch)
+		"####" A 0 A_FireCustomMissile("SwordLunge", 1, 0, 0, -2)
+		"####" A 0 A_Saw("", "QUIETHIT", 1, "PaladinMeleePuff", 0, 120, 0,16)
+		"####" A 0 A_SetPitch((-2) + pitch)
+		"####" KJ 1 A_SetPitch((-2) + pitch)
+		
+		"####" A 0 A_PlaySound("QUIETFIR",2)
+		"####" A 0 A_FireCustomMissile("SwordLunge", 1, 0, 0, -2)
+		"####" A 0 A_Saw("", "QUIETHIT", 1, "PaladinMeleePuff", 0, 120, 0,16)
+		//"####" A 0 A_SetPitch((-2) + pitch)
 		
 		"####" A 0 A_FireCustomMissile("SwordLunge", 0, 0, 0, 0)
 		"####" A 0 A_Saw("", "", 1, "PaladinMeleePuff", 0, 120, 0,16)
@@ -1265,9 +1272,9 @@ QuickLunge:
 
 		"####" A 0 A_TakeInventory("SpecialAttackSword", 1)
 		
-		"####" A 0 A_JumpIfInventory("QuietusIsCharged",1, 6)
+		"####" A 0 A_JumpIfInventory("QuietusIsCharged",1, 7)
 		W04D BCDEF 2 A_WeaponReady	// ("Kicking",1,"KickRight")
-		"####" A 0 A_Jump(256, 5)
+		"####" A 0 A_Jump(256, 6)
 		W04D BCDEF 2 A_WeaponReady	// ("Kicking",1,"KickRight")	(Razor Rail Charge Sprites)
 		
 		"####" A 0 A_TakeInventory("ReadyToQuickFire", 1) //TO PREVENT LUNGE ABUSING	
@@ -1368,7 +1375,7 @@ QuickPowerLunge:
 		//"####" A 0 A_JumpIfInventory("FiredSecondary", 1, "Lunge")
 		//"####" A 0 A_JumpIfInventory("FiredPrimary", 1, "QuickFire")
 		
-		"####" A 5 A_JumpIfInventory("Kicking",1,"KickLeft") 
+		"####" A 0 A_JumpIfInventory("Kicking",1,"KickLeft") 
 
 		"####" PR 2 A_WeaponReady
 		
@@ -2454,7 +2461,7 @@ inventory.maxamount 1
 
 ACTOR QuietusRazor: FastProjectile	//Not used currently (just a base for other razors below)
 {
-	Radius 25
+	Radius 8
 	Height 1
 	Speed 70
 	DamageType Cut
@@ -2506,8 +2513,8 @@ Scale 1.0
 
 ACTOR QuietusRazorHor: FastProjectile
 {
-	Radius 50
-	Height 20
+	Radius 16
+	Height 4
 	Speed 70
 	DamageType Cut
 	Damage (random (50,60))
@@ -2606,8 +2613,8 @@ ACTOR QuietusRazorHor2: QuietusRazorHor
 
 ACTOR QuietusRazorVer: QuietusRazorHor
 {
-	Radius 10
-	Height 100
+	Radius 4
+	Height 16
 	Decal "RazorUprightLeftSlashDecal"
 	-NOCLIP    //Don't bother here for noclip cause projectile is too thin
 	
@@ -2647,8 +2654,8 @@ ACTOR QuietusRazorVer: QuietusRazorHor
 
 ACTOR QuietusRazorVer2: QuietusRazorHor
 {
-	Radius 10
-	Height 100
+	Radius 4
+	Height 16
 	Decal "RazorUprightRightSlashDecal"
 	-NOCLIP    //Don't bother here for noclip cause projectile is too thin
 	
@@ -2688,8 +2695,8 @@ ACTOR QuietusRazorVer2: QuietusRazorHor
 
 ACTOR QuietusRazorHorPower: QuietusRazorHor
 {
-	Radius 100
-	Height 200
+	Radius 32
+	Height 4
 	Scale 2.0
 	Speed 70
 	DamageType Cut

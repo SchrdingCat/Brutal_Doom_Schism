@@ -1,88 +1,248 @@
 // Blood dripping on screen by Sergeant_Mark_IV
 // Dripping blood graphics can be found inside Bleed.wad
 
-#include "zcommon.acs"
 #library "bloodsplash"
-
+#include "zcommon.acs"
 
 script 580 (void)
 {
+SetHudSize(400,250,1);
 
 	delay(1);
-	int ranx = random (0.4, 1.0);
-	int rany = random (0.4, 1.0);
-	int ran2x = random (0.0, 1.0);
-	int ran2y = random (0.0, 1.0);
 	setfont("RBLD1");
-	hudmessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, ranx, rany, 1.0);
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.1, 61.1, 0.3);
+	delay(4);
 	setfont("RBLD2");
-	hudmessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, ran2x, ran2y, 1.0);
-	
-	
-	
-}	
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.1, 61.1, 0.3);
+	delay(4);
+	setfont("RBLD3");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.1, 61.1, 0.3);
+	delay(4);
+	setfont("RBLD4");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.1, 61.1, 0.3);
+	delay(4);
+	setfont("RBLD5");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.1, 61.1, 0.3);
+	delay(4);
+	setfont("RBLD6");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.1, 61.1, 0.3);
+	delay(4);
+	setfont("RBLD7");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.9, 61.9, 0.3);
+	delay(4);
+	setfont("RBLD8");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.9, 61.9, 0.3);
+	delay(4);
+	setfont("RBLD9");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.9, 61.9, 0.3);
+	delay(4);
+	setfont("RBLD10");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.9, 61.9, 0.3);
+	delay(4);
+	setfont("RBLD11");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 63.9, 61.9, 0.3);
+	delay(4);
+}
 
 script 581 (void)
 {
-	SetHudSize(400,250,1);
+SetHudSize(400,250,1);
 
-	delay(1);
-	int ranx = random (2.0, 400.0);
-	int rany = random (2.0, 250.0);
-	int ran2x = random (2.0, 400.0);
-	int ran2y = random (2.0, 250.0);
+	delay(2);
 	setfont("RBLD1");
-	hudmessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, ranx, rany, 1.0);
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
 	setfont("RBLD2");
-	hudmessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, ran2x, ran2y, 1.0);
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
+	setfont("RBLD3");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
+	setfont("RBLD4");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
+	setfont("RBLD5");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
+	setfont("RBLD6");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
+	setfont("RBLD7");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
+	setfont("RBLD8");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
+	setfont("RBLD9");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
+	setfont("RBLD10");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
+	setfont("RBLD11");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 0.9, 30.9, 0.3);
+	delay(4);
 }
-
-
 
 script 582 (void)
 {
+SetHudSize(400,250,1);
 
-	SetHudSize(400,250,1);
-
-	delay(1);
-	int ranx = random (2.0, 400.0);
-	int rany = random (2.0, 250.0);
-	int ran2x = random (2.0, 400.0);
-	int ran2y = random (2.0, 250.0);
-	setfont("GBLD1");
-	hudmessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, ranx, rany, 1.0);
-	setfont("GBLD2");
-	hudmessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, ran2x, ran2y, 1.0);
+	delay(3);
+	setfont("RBLD1");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.1, 81.1, 0.2);
+	delay(4);
+	setfont("RBLD2");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.1, 81.1, 0.3);
+	delay(4);
+	setfont("RBLD3");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.1, 81.1, 0.3);
+	delay(4);
+	setfont("RBLD4");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.1, 81.1, 0.3);
+	delay(4);
+	setfont("RBLD5");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.1, 81.1, 0.3);
+	delay(4);
+	setfont("RBLD6");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.1, 81.1, 0.3);
+	delay(4);
+	setfont("RBLD7");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.9, 81.9, 0.3);
+	delay(4);
+	setfont("RBLD8");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.9, 81.9, 0.3);
+	delay(4);
+	setfont("RBLD9");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.9, 81.9, 0.3);
+	delay(4);
+	setfont("RBLD10");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.9, 81.9, 0.3);
+	delay(4);
+	setfont("RBLD11");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 263.9, 81.9, 0.3);
+	delay(4);
 }
-
-
 
 script 583 (void)
 {
+SetHudSize(400,250,1);
 
-	SetHudSize(400,250,1);
-
-	delay(1);
-	int ranx = random (2.0, 400.0);
-	int rany = random (2.0, 250.0);
-	int ran2x = random (2.0, 400.0);
-	int ran2y = random (2.0, 250.0);
-	setfont("BBLD1");
-	hudmessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, ranx, rany, 1.0);
-	setfont("BBLD2");
-	hudmessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, ran2x, ran2y, 1.0);
+	delay(4);
+	setfont("RBLD1");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.1, -11.1, 0.2);
+	delay(4);
+	setfont("RBLD2");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.1, -11.1, 0.3);
+	delay(4);
+	setfont("RBLD3");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.1, -11.1, 0.3);
+	delay(4);
+	setfont("RBLD4");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.1, -11.1, 0.3);
+	delay(4);
+	setfont("RBLD5");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.1, -11.1, 0.3);
+	delay(4);
+	setfont("RBLD6");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.1, -11.1, 0.3);
+	delay(4);
+	setfont("RBLD7");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.9, -11.9, 0.3);
+	delay(4);
+	setfont("RBLD8");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.9, -11.9, 0.3);
+	delay(4);
+	setfont("RBLD9");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.9, -11.9, 0.3);
+	delay(4);
+	setfont("RBLD10");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.9, -11.9, 0.3);
+	delay(4);
+	setfont("RBLD11");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 123.9, -11.9, 0.3);
+	delay(4);
 }
 
 
-//WATER
+
 script 584 (void)
 {
+SetHudSize(400,250,1);
 
-	SetHudSize(400,250,1);
+	delay(4);
+	setfont("RBLD1");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 101.1, 0.2);
+	delay(4);
+	setfont("RBLD2");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 101.1, 0.3);
+	delay(4);
+	setfont("RBLD3");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 101.1, 0.3);
+	delay(4);
+	setfont("RBLD4");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 101.1, 0.3);
+	delay(4);
+	setfont("RBLD5");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 101.1, 0.3);
+	delay(4);
+	setfont("RBLD6");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 101.1, 0.3);
+	delay(4);
+	setfont("RBLD7");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.9, 101.9, 0.3);
+	delay(4);
+	setfont("RBLD8");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.9, 101.9, 0.3);
+	delay(4);
+	setfont("RBLD9");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.9, 101.9, 0.3);
+	delay(4);
+	setfont("RBLD10");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.9, 101.9, 0.3);
+	delay(4);
+	setfont("RBLD11");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.9, 101.9, 0.3);
+	delay(4);
+}
 
-	delay(1);
-	int ranx = random (200.0, 300.0);
-	int rany = random (2.0, 50.0);
-	setfont("WTSP");
-	hudmessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, ranx, rany, 1.0);
+
+script 585 (void)
+{
+SetHudSize(400,250,1);
+
+	delay(4);
+	setfont("RBLD1");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 11.1, 0.2);
+	delay(4);
+	setfont("RBLD2");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 11.1, 0.3);
+	delay(4);
+	setfont("RBLD3");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 11.1, 0.3);
+	delay(4);
+	setfont("RBLD4");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 11.1, 0.3);
+	delay(4);
+	setfont("RBLD5");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 11.1, 0.3);
+	delay(4);
+	setfont("RBLD6");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.1, 11.1, 0.3);
+	delay(4);
+	setfont("RBLD7");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.9, 11.9, 0.3);
+	delay(4);
+	setfont("RBLD8");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.9, 11.9, 0.3);
+	delay(4);
+	setfont("RBLD9");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.9, 11.9, 0.3);
+	delay(4);
+	setfont("RBLD10");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.9, 11.9, 0.3);
+	delay(4);
+	setfont("RBLD11");
+	hudmessage(s:"A"; HUDMSG_PLAIN, 0, CR_UNTRANSLATED, 213.9, 11.9, 0.3);
+	delay(4);
 }
