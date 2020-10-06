@@ -1,10 +1,11 @@
 	GameInfo
 	{
+    titlemusic = "MSCHISM" 
 	AddCreditPage = "CREDIT2", "CREDIT3", "CREDIT4"
 	AddInfoPage = "HELP1"
 	infopage = "HELP1"
 	NoRandomPlayerClass = True
-	}
+	}	
 	episode EDAY01
 	{
 	optional

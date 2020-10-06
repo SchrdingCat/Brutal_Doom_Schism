@@ -117,6 +117,7 @@
 		Player.StartItem "Berserker_Melee_Attacks"
 		Player.StartItem "TheQuietus", 1
 		Player.StartItem "BattleAxe", 1
+		//Player.StartItem "Arrancadora", 1
 		Player.StartItem "IsPlayer", 1
 		Player.StartItem "IsPaladin", 1
 		Player.StartItem "IsNOTTacticalClass", 1
