@@ -35,6 +35,7 @@
 	#include "Actors/SpecialEffects/Casing.txt"
 	#include "Actors/SpecialEffects/Fire.txt"
 	#include "Actors/SpecialEffects/Sparks.txt"
+	#include "Actors/SpecialEffects/Sparkles.txt"
 	#include "Actors/SpecialEffects/Flares.txt"
 	#include "Actors/PowerUps/Artifact.txt"
 	#include "Actors/PowerUps/health2.txt"
@@ -73,6 +74,7 @@
 	//Paladin Weapons
 	#include "Actors/PaladinWeapons/Bereserker_Melee.txt"
 	#include "Actors/PaladinWeapons/Quietus.txt"
+	#include "Actors/PaladinWeapons/HAMMER.txt"
 	#include "Actors/PaladinWeapons/Crossbow.txt" 
 	#include "Actors/PaladinWeapons/Shield_Axe.txt"
 	#include "Actors/PaladinWeapons/Shield_Rifle.txt"
@@ -151,6 +153,9 @@
 	#include "Actors/MageWeapons/Mage_Staff.txt"
 	#include "Actors/MageWeapons/Mage_Dagger.txt"
 	#include "Actors/MageWeapons/MagicWarpActors.txt"
+	#include "Actors/MageWeapons/iceprojectiles.txt"
+	#include "Actors/MageWeapons/FireProjectiles.txt"
+	#include "Actors/MageWeapons/LightningProjectiles.txt"	
 	//Mage Familiars
 	#include "Actors/MageFamiliars/Scimitar.txt"
 	#include "Actors/MageFamiliars/Warrior.txt"
@@ -200,7 +205,6 @@
 	#include "Actors/Slot6Energy/Freezer.txt"
 	#include "Actors/Slot9Throwable/freezenade.txt"
 	#include "Actors/Slot9Throwable/Freezebot_Weapon.txt"
-	#include "Actors/MageWeapons/IceProjectiles.txt"
 	#include "Actors/CatsFrozenAddon/IceShards.txt"
 	#include "Actors/CatsFrozenAddon/Frozen2.txt"
 	//MAP ENHANCEMENT SYSTEM

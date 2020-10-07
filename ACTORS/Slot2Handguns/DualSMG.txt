@@ -104,9 +104,9 @@
 			SMGG A 0 A_PlaySound("FARSHT", 6)
 			SMGG A 0 A_PlaySound("SMGFIRE", 1)
 			SLMG A 0 A_JumpIfInventory("IsPaladin",1,3)
-			SLMG A 1 BRIGHT A_FireBullets(12,3.5,-1,12,"WeakPuff", FBF_NORANDOM)//Horizontal Spread, Vertical Spread, Numbers of Projectiles (Leave as -1 if its a single one), Damage Factor
+			SLMG A 1 BRIGHT A_FireBullets(12,3.5,-1,16,"WeakPuff", FBF_NORANDOM)//Horizontal Spread, Vertical Spread, Numbers of Projectiles (Leave as -1 if its a single one), Damage Factor
 			SLMG A 0 A_Jump(256,2)
-			SLMP A 1 BRIGHT A_FireBullets (3.5, 3.5, 1, 12, "WeakPuff", FBF_NORANDOM)
+			SLMP A 1 BRIGHT A_FireBullets (3.5, 3.5, 1, 16, "WeakPuff", FBF_NORANDOM)
 			TNT1 A 0 A_SetPitch(+0.6 + pitch)//Vertical recoil up
 			SLMP B 0 A_JumpIfInventory("IsPaladin",1,2)
 			SLMG B 0
@@ -154,9 +154,9 @@
 			SMGG A 0 A_PlaySound("FARSHT", 6)
 			SMGG A 0 A_PlaySound("SMGFIRE", 1)
 			SRMG A 0 A_JumpIfInventory("IsPaladin",1,3)
-			SRMG A 1 BRIGHT A_FireBullets(12,3.5,-1,12,"WeakPuff", FBF_NORANDOM)//Horizontal Spread, Vertical Spread, Numbers of Projectiles (Leave as -1 if its a single one), Damage Factor
+			SRMG A 1 BRIGHT A_FireBullets(12,3.5,-1,16,"WeakPuff", FBF_NORANDOM)//Horizontal Spread, Vertical Spread, Numbers of Projectiles (Leave as -1 if its a single one), Damage Factor
 			SRMG A 0 A_Jump(256,2)
-			SRMP A 1 BRIGHT A_FireBullets (3.5, 3.5, 1, 12, "WeakPuff", FBF_NORANDOM)
+			SRMP A 1 BRIGHT A_FireBullets (3.5, 3.5, 1, 16, "WeakPuff", FBF_NORANDOM)
 			TNT1 A 0 A_SetPitch(+0.6 + pitch)//Vertical recoil up
 			SRMP B 0 A_JumpIfInventory("IsPaladin",1,2)
 			SRMG B 0
