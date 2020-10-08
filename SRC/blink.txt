@@ -1,0 +1,15 @@
+#include "zcommon.acs"
+
+
+script 7999 ENTER // addr = 8, flags=0000
+{
+    Thing_ChangeTID(0, 9000);
+    Terminate;
+
+}
+script 7998 (void) // addr = 18, flags=0000
+{
+    SetActorPosition(9000, GetActorX(9998), GetActorY(9998), GetActorZ(9998), 1);
+    Terminate;
+
+}

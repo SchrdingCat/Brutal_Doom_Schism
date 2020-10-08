@@ -1,0 +1,9 @@
+#include "zcommon.acs"
+
+
+script 65535 (void) // addr = 8, flags=0000
+{
+    SetResultValue(GetSectorFloorZ(0, 0, 0));
+    Terminate;
+
+}

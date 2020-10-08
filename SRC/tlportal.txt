@@ -1,0 +1,489 @@
+#include "zcommon.acs"
+
+int map0[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+int map1[16] = {"P1BluePortal", "P1RedPortal", "P2BluePortal", "P2RedPortal", "P3BluePortal", "P3RedPortal", "P4BluePortal", "P4RedPortal", "P5BluePortal", "P5RedPortal", "P6BluePortal", "P6RedPortal", "P7BluePortal", "P7RedPortal", "P8BluePortal", "P8RedPortal"};
+int map2[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+int map3[3] = {"Nothing", "Projectile", "Portal"};
+int map4[8] = {7, 8, 3, 10, 12, 9, 0, 6};
+
+function int func0 (int local0, int local1) // addr = 8
+{
+    int local2, local3, local5, local6;
+    int goto_block;
+    while (1) {
+        switch (goto_block) {
+        case 0:
+            local2 = ((GetActorX(local0) - GetActorX(local1)) >> 16);
+            local3 = ((GetActorY(local0) - GetActorY(local1)) >> 16);
+            local5 = ((((local2 * local2) + (local3 * local3)) + 1) >> 1);
+            goto_block = 2; continue;
+
+        case 2:
+            if (!(local5 > local6)) {
+                return local6;
+            }
+            local6++;
+            local5 -= local6;
+            goto_block = 2; continue;
+
+        }
+    }
+    return 0;
+}
+function int func1 (int local0, int local1) // addr = 75
+{
+    int local2;
+    local2 = 0;
+    if (((func0(local0, local1) <= 32) && ((GetActorZ(local0) >= (GetActorZ(local1) - 3670016)) && (GetActorZ(local0) <= (GetActorZ(local1) + 3670016))))) {
+        local2 = 1;
+    }
+    return local2;
+
+    return 0;
+}
+script 870 (int local0, int local1, int local2) // addr = 128, flags=0000
+{
+    int local3, local4, local5;
+    int goto_block;
+    switch (goto_block) {
+    case 0:
+        local3 = (9108 + local1);
+        local4 = (9100 + local1);
+        local5 = (9000 + local0);
+        if ((((((CheckActorInventory(local5, "PosessionStone") || CheckActorInventory(local5, "RedFlag")) || CheckActorInventory(local5, "BlueFlag")) || CheckActorInventory(local5, "WhiteFlag")) || CheckActorInventory(local5, "RedSkullST")) || CheckActorInventory(local5, "BlueSkullST"))) {
+            Terminate;
+        }
+        switch (local2) {
+            case 0:
+                if (!!ThingCount(0, local3)) {
+                    map0[1] = local0;
+                    SetActorPosition(local5, GetActorX(local3), GetActorY(local3), GetActorZ(local3), 0);
+                    if (func1(local5, local3)) {
+                        if (ThingCount(0, local4)) {
+                            Spawn("BlueTeleportSpawner", GetActorX(local4), GetActorY(local4), GetActorZ(local4), 0, 0);
+                            ThingSound(local4, "PortalTeleport", 127);
+                        }
+                        Spawn("RedTeleportSpawner", GetActorX(local3), GetActorY(local3), GetActorZ(local3), 0, 0);
+                        ThingSound(local3, "PortalTeleport", 127);
+                    }
+                }
+                goto_block = 2; restart;
+            case 1:
+                if (!!ThingCount(0, local4)) {
+                    map0[1] = local0;
+                    SetActorPosition(local5, GetActorX(local4), GetActorY(local4), GetActorZ(local4), 0);
+                    if (func1(local5, local4)) {
+                        if (ThingCount(0, local4)) {
+                            Spawn("RedTeleportSpawner", GetActorX(local3), GetActorY(local3), GetActorZ(local3), 0, 0);
+                            ThingSound(local3, "PortalTeleport", 127);
+                        }
+                        Spawn("BlueTeleportSpawner", GetActorX(local4), GetActorY(local4), GetActorZ(local4), 0, 0);
+                        ThingSound(local4, "PortalTeleport", 127);
+                    }
+                }
+                goto_block = 2; restart;
+        }
+        goto_block = 2; restart;
+
+    case 2:
+        Terminate;
+
+    }
+}
+script 871 ENTER // addr = 478, flags=0000
+{
+    Thing_ChangeTID(0, (9000 + PlayerNumber()));
+    Terminate;
+
+}
+script 872 DEATH // addr = 491, flags=0000
+{
+    int local0, local1, local2, local3;
+    local0 = (9100 + PlayerNumber());
+    local1 = (9200 + PlayerNumber());
+    local2 = (9108 + PlayerNumber());
+    local3 = (9208 + PlayerNumber());
+    Thing_ChangeTID(0, 0);
+    if (ThingCount(0, local0)) {
+        Spawn("BlueRemoveVaporSpawner", GetActorX(local0), GetActorY(local0), GetActorZ(local0), 0, 0);
+        Thing_Remove(local0);
+    }
+    if (ThingCount(0, local1)) {
+        Spawn("BlueRemoveVaporSpawner", GetActorX(local1), GetActorY(local1), GetActorZ(local0), 0, 0);
+        Thing_Remove(local1);
+    }
+    if (ThingCount(0, local2)) {
+        Spawn("RedRemoveVaporSpawner", GetActorX(local2), GetActorY(local2), GetActorZ(local2), 0, 0);
+        Thing_Remove(local2);
+    }
+    if (ThingCount(0, local3)) {
+        Spawn("RedRemoveVaporSpawner", GetActorX(local3), GetActorY(local3), GetActorZ(local2), 0, 0);
+        Thing_Remove(local3);
+    }
+    Terminate;
+
+}
+script 873 RESPAWN // addr = 661, flags=0000
+{
+    Thing_ChangeTID(0, (9000 + PlayerNumber()));
+    Terminate;
+
+}
+script 874 (int local0) DISCONNECT // addr = 674, flags=0000
+{
+    int local1, local2, local3, local4;
+    local1 = (9100 + local0);
+    local2 = (9200 + local0);
+    local3 = (9108 + local0);
+    local4 = (9208 + local0);
+    if (ThingCount(0, local1)) {
+        Spawn("BlueRemoveVaporSpawner", GetActorX(local1), GetActorY(local1), GetActorZ(local1), 0, 0);
+        Thing_Remove(local1);
+    }
+    if (ThingCount(0, local2)) {
+        Spawn("BlueRemoveVaporSpawner", GetActorX(local2), GetActorY(local2), GetActorZ(local1), 0, 0);
+        Thing_Remove(local2);
+    }
+    if (ThingCount(0, local3)) {
+        Spawn("RedRemoveVaporSpawner", GetActorX(local3), GetActorY(local3), GetActorZ(local3), 0, 0);
+        Thing_Remove(local3);
+    }
+    if (ThingCount(0, local4)) {
+        Spawn("RedRemoveVaporSpawner", GetActorX(local4), GetActorY(local4), GetActorZ(local3), 0, 0);
+        Thing_Remove(local4);
+    }
+    Terminate;
+
+}
+script 875 (int local0) // addr = 839, flags=0000
+{
+    int local1;
+    int goto_block;
+    switch (goto_block) {
+    case 0:
+        local1 = 0;
+        switch (PlayerNumber()) {
+            case 0:
+                if ((local0 == 0)) {
+                    local1 = 256;
+                }
+                goto_block = 2; restart;
+            case 1:
+                if ((local0 == 1)) {
+                    local1 = 256;
+                }
+                goto_block = 2; restart;
+            case 2:
+                if ((local0 == 2)) {
+                    local1 = 256;
+                }
+                goto_block = 2; restart;
+            case 3:
+                if ((local0 == 3)) {
+                    local1 = 256;
+                }
+                goto_block = 2; restart;
+            case 4:
+                if ((local0 == 4)) {
+                    local1 = 256;
+                }
+                goto_block = 2; restart;
+            case 5:
+                if ((local0 == 5)) {
+                    local1 = 256;
+                }
+                goto_block = 2; restart;
+            case 6:
+                if ((local0 == 6)) {
+                    local1 = 256;
+                }
+                goto_block = 2; restart;
+            case 7:
+                if ((local0 == 7)) {
+                    local1 = 256;
+                }
+                goto_block = 2; restart;
+        }
+        goto_block = 2; restart;
+
+    case 2:
+        SetResultValue(local1);
+        Terminate;
+
+    }
+}
+script 877 (void) // addr = 1110, flags=0000
+{
+    int local0, local1, local2, local3, local4, local5, local6, local7, local8;
+    int goto_block;
+    switch (goto_block) {
+    case 0:
+        local0 = ActivatorTid();
+        local1 = ((local0 - 9200) % 8);
+        if ((local0 < 9208)) {
+            local2 = 0;
+        } else {
+            local2 = 1;
+        }
+        local3 = (9100 + (local1 + (8 * local2)));
+        local5 = map1[((local1 * 2) + local2)];
+        local4 = (9000 + local1);
+        if (func1(local4, local0)) {
+            ACS_ExecuteAlways(870, 0, local1, local1, local2);
+        }
+        if (((GetActorCeilingZ(local0) - GetActorFloorZ(local0)) < 3670016)) {
+            Terminate;
+        }
+        local6 = ((GetActorZ(local0) + 8) - 1835008);
+        if ((((GetActorZ(local0) + 8) - GetActorFloorZ(local0)) < 1835008)) {
+            local6 = GetActorFloorZ(local0);
+        }
+        if (((GetActorCeilingZ(local0) - (GetActorZ(local0) + 8)) < 1835008)) {
+            local6 = (GetActorCeilingZ(local0) - 3670016);
+        }
+        Spawn(local5, GetActorX(local0), GetActorY(local0), local6, local3, 0);
+        if ((ThingCount(0, local3) > 0)) {
+            Thing_Remove(local0);
+            switch (local2) {
+                case 0:
+                    local7 = 9108;
+                    goto_block = 2; restart;
+                case 1:
+                    local8 = 9100;
+                    goto_block = 3; restart;
+            }
+        }
+        goto_block = 4; restart;
+
+    case 2:
+        if ((local7 < 9116)) {
+            if (func1(local3, local7)) {
+                Spawn("RedRemoveVaporSpawner", GetActorX(local7), GetActorY(local7), GetActorZ(local7), 0, 0);
+                SetActorPosition(local3, GetActorX(local7), GetActorY(local7), GetActorZ(local7), 0);
+                Thing_Remove(local7);
+            }
+            Delay(1);
+            local7++;
+            goto_block = 2; restart;
+        } else {
+            goto_block = 4; restart;
+        }
+
+    case 3:
+        if ((local8 < 9108)) {
+            if (func1(local3, local8)) {
+                Spawn("BlueRemoveVaporSpawner", GetActorX(local8), GetActorY(local8), GetActorZ(local8), 0, 0);
+                SetActorPosition(local3, GetActorX(local8), GetActorY(local8), GetActorZ(local8), 0);
+                Thing_Remove(local8);
+            }
+            Delay(1);
+            local8++;
+            goto_block = 3; restart;
+        } else {
+            goto_block = 4; restart;
+        }
+
+    case 4:
+        Terminate;
+
+    }
+}
+script 878 (void) // addr = 1570, flags=0001
+{
+    Log(d:ActivatorTid());
+    Terminate;
+
+}
+script 879 (int local0) // addr = 1577, flags=0000
+{
+    int local1, local2, local3, local4, local5, local6;
+    int goto_block;
+    switch (goto_block) {
+    case 0:
+        local2 = (9100 + PlayerNumber());
+        local1 = (9108 + PlayerNumber());
+        if ((local0 == 0)) {
+            if (ThingCount(0, local2)) {
+                Spawn("BlueRemoveVaporSpawner", GetActorX(local2), GetActorY(local2), GetActorZ(local2), 0, 0);
+                Thing_Remove(local2);
+            }
+            if (ThingCount(0, local1)) {
+                Spawn("RedRemoveVaporSpawner", GetActorX(local1), GetActorY(local1), GetActorZ(local1), 0, 0);
+                Thing_Remove(local1);
+            }
+            LocalAmbientSound("PortalRemove", 127);
+            FadeTo(60, 230, 15, 22937, 0);
+            FadeTo(60, 230, 15, 0, 65536);
+            HudMessage(s:"Portals removed."; (2 | 2147483648), 0, 3, 32768, 52428, 131072, 1310, 32768);
+            Terminate;
+        } else {
+            if (!(local0 == 1)) {
+                Terminate;
+            }
+            local3 = 0;
+            goto_block = 2; restart;
+        }
+
+    case 2:
+        if ((local3 < 16)) {
+            if (!((local3 == PlayerNumber()) || (local3 == (PlayerNumber() + 8)))) {
+                local4 = (9100 + local3);
+                local5 = (9200 + local3);
+                if (ThingCount(0, local4)) {
+                    if ((local3 < 8)) {
+                        Spawn("BlueRemoveVaporSpawner", GetActorX(local4), GetActorY(local4), GetActorZ(local4), 0, 0);
+                    } else {
+                        Spawn("RedRemoveVaporSpawner", GetActorX(local4), GetActorY(local4), GetActorZ(local4), 0, 0);
+                    }
+                    Thing_Remove(local4);
+                }
+                if (ThingCount(0, local5)) {
+                    if ((local3 < 8)) {
+                        Spawn("BlueRemoveVaporSpawner", GetActorX(local4), GetActorY(local4), GetActorZ(local4), 0, 0);
+                    } else {
+                        Spawn("RedRemoveVaporSpawner", GetActorX(local4), GetActorY(local4), GetActorZ(local4), 0, 0);
+                    }
+                    Thing_Remove(local5);
+                }
+            }
+            local3++;
+            goto_block = 2; restart;
+        } else {
+            local6 = 0;
+            goto_block = 3; restart;
+        }
+
+    case 3:
+        if (!(local6 < 8)) {
+            AmbientSound("PortalRemove", 127);
+            FadeTo(255, 255, 255, 52428, 0);
+            FadeTo(255, 255, 255, 0, 98304);
+            HudMessageBold(n:PlayerNumber(), s:"\c- has destroyed everyone's portals!"; (2 | 2147483648), 0, 2, 32768, 52428, 131072, 1310, 32768);
+            Terminate;
+        }
+        if (!!CheckActorInventory((9000 + local6), "PortalGun")) {
+            if ((local6 == PlayerNumber())) {
+                Thing_Damage((9000 + local6), (3 * Random(1, 8)), 0);
+                Radius_Quake(2, 35, 0, 1, (9000 + PlayerNumber()));
+            } else {
+                Thing_Damage((9000 + local6), (6 * Random(1, 8)), 0);
+                Radius_Quake(4, 35, 0, 1, (9000 + PlayerNumber()));
+            }
+        }
+        local6++;
+        goto_block = 3; restart;
+
+    }
+}
+script 880 (void) // addr = 2168, flags=0001
+{
+    if (map2[PlayerNumber()]) {
+        HudMessage(s:"Portal indicators off."; 2, 700, 10, 32768, 13107, 131072, 1310, 32768);
+        map2[0] = PlayerNumber();
+        Terminate;
+    } else {
+        HudMessage(s:"Portal indicators on."; 2, 700, 10, 32768, 13107, 131072, 1310, 32768);
+        map2[1] = PlayerNumber();
+        ACS_ExecuteAlways(881, 0);
+        Terminate;
+    }
+
+}
+script 881 (void) // addr = 2284, flags=0000
+{
+    int local0, local1, local2, local3, local4, local5;
+    int goto_block;
+    switch (goto_block) {
+    case 0:
+        map2[1] = PlayerNumber();
+        local0 = (9200 + PlayerNumber());
+        local1 = (9208 + PlayerNumber());
+        local3 = (9100 + PlayerNumber());
+        local2 = (9108 + PlayerNumber());
+        SetHudSize(GetScreenWidth(), GetScreenHeight(), 1);
+        goto_block = 2; restart;
+
+    case 2:
+        if (!map2[PlayerNumber()]) {
+            Terminate;
+        }
+        local5 = 0;
+        local4 = 0;
+        if ((ThingCount(0, local0) > 0)) {
+            local5 = 1;
+        }
+        if ((ThingCount(0, local3) > 0)) {
+            local5 = 2;
+        }
+        if ((ThingCount(0, local1) > 0)) {
+            local4 = 1;
+        }
+        if ((ThingCount(0, local2) > 0)) {
+            local4 = 2;
+        }
+        SetFont("RPRTICON");
+        HudMessage(s:"A"; 1, 801, 4294967295, 530841, 530841, 655, 32768);
+        SetFont("BPRTICON");
+        HudMessage(s:"A"; 1, 802, 4294967295, 530841, 2627993, 655, 32768);
+        SetFont("SmallFont");
+        HudMessage(s:map3[local4]; 1, 803, map4[PlayerNumber()], 2627993, 1055129, 655, 32768);
+        HudMessage(s:map3[local5]; 1, 804, map4[PlayerNumber()], 2627993, 3152281, 655, 32768);
+        Delay(1);
+        goto_block = 2; restart;
+
+    }
+}
+script 882 OPEN // addr = 2604, flags=0000
+{
+    int local0, local1, local2, local3, local4;
+    int goto_block;
+    switch (goto_block) {
+    case 0:
+        local0 = 0;
+        goto_block = 2; restart;
+
+    case 2:
+        if (!(local0 < 8)) {
+            Delay(1);
+            goto_block = 0; restart;
+        }
+        local1 = (9000 + local0);
+        local2 = 0;
+        if (((!PlayerInGame(local0) || !ThingCount(0, local1)) || (GetActorProperty(local1, 0) < 1))) {
+            goto_block = 3; restart;
+        } else {
+            local3 = 0;
+            goto_block = 4; restart;
+        }
+
+    case 3:
+        local0++;
+        goto_block = 2; restart;
+
+    case 4:
+        if ((local3 < 16)) {
+            local4 = (9100 + local3);
+            if (!!ThingCount(0, local4)) {
+                if (func1(local1, local4)) {
+                    if (!map0[local0]) {
+                        if ((local3 < 8)) {
+                            ACS_ExecuteAlways(870, 0, local0, (local3 % 8), 0);
+                        } else {
+                            ACS_ExecuteAlways(870, 0, local0, (local3 % 8), 1);
+                        }
+                    } else {
+                        local2 = 1;
+                    }
+                }
+            }
+            local3++;
+            goto_block = 4; restart;
+        } else {
+            if (!local2) {
+                map0[0] = local0;
+            }
+            goto_block = 3; restart;
+        }
+
+    }
+}
